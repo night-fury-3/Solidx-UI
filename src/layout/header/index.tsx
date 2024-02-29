@@ -4,7 +4,7 @@ import { Box, Hidden, Stack, useMediaQuery, useTheme } from "@mui/material";
 
 import _ from "lodash";
 
-import SearchBar from "components/SearchBar";
+// import SearchBar from "components/SearchBar";
 import ConnectWallet from "./components/ConnectWallet";
 import Mails from "./components/Mails";
 // import Notification from "./components/Notification";
@@ -74,7 +74,7 @@ function Header() {
         <Hidden smDown>
           <PriceView />
         </Hidden>
-        {tabletDown ? null : <SearchBar />}
+        {/* {tabletDown ? null : <SearchBar />} */}
       </Stack>
       <Stack direction="row" alignItems="center">
         <Stack direction="row" spacing={1} alignItems="center">

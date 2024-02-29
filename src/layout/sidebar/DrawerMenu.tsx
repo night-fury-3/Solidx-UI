@@ -52,7 +52,7 @@ function DrawerMenu() {
           <Box pb={3}>
             <MenuItem>
               <StyledText fontSize={"0.75rem"} fontWeight={500}>
-                © 2023 SolidX All right reserved
+                © 2024 SolidX All right reserved
               </StyledText>
             </MenuItem>
           </Box>
