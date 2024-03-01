@@ -33,11 +33,11 @@ function useDealContract() {
     [chainId]
   );
 
-  const getUSDCfromSOLIDX = useCallback(async () => {
+  const getUSDCtoSOLIDX = useCallback(async () => {
     return (await readContract({
       address: dealContractAddress[chainId],
       abi: AbiDeal,
-      functionName: "getUSDCfromSOLIDX",
+      functionName: "getUSDCtoSOLIDX",
       args: []
     })) as bigint;
   }, [chainId]);
@@ -161,7 +161,7 @@ function useDealContract() {
 
   return {
     getFeeAmount,
-    getUSDCfromSOLIDX,
+    getUSDCtoSOLIDX,
     approveDeal,
     cancelDeal,
     createDeal,

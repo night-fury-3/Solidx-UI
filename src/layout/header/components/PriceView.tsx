@@ -8,12 +8,12 @@ import useDealContract from "hooks/useDealContract";
 import Logo from "../../../assets/icons/LogoWithoutText";
 
 function PriceView() {
-  const { getUSDCfromSOLIDX } = useDealContract();
+  const { getUSDCtoSOLIDX } = useDealContract();
   const chainId = useChainId();
   const [price, setPrice] = useState<number>(0);
 
   const getPrice = useCallback(async () => {
-    const temp = await getUSDCfromSOLIDX();
+    const temp = await getUSDCtoSOLIDX();
     setPrice(1.0 / Number(temp));
   }, [chainId]);
 
