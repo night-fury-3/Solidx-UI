@@ -10,9 +10,7 @@ import createTheme from "theme";
 import { createWeb3Modal, defaultWagmiConfig } from "@web3modal/wagmi/react";
 
 import { WagmiConfig } from "wagmi";
-import { bsc, bscTestnet, mainnet } from "viem/chains";
-// import { mainnet } from "viem/chains";
-// import { bsc } from "viem/chains";
+import { bsc } from "viem/chains"; // ??? only bsc now
 
 import ChatProvider from "contexts/ChatProvider";
 import { walletconnectProjectID } from "config";
@@ -28,8 +26,8 @@ import { LayoutProps } from "./index.type";
 
 import "react-notifications-component/dist/theme.css";
 
-const chains = [bscTestnet, mainnet, bsc]; // mainnet(ethereum) ???
-// const chains = [mainnet];
+const chains = [bsc]; // ??? available chain
+
 const wagmiConfig = defaultWagmiConfig({ chains, projectId: walletconnectProjectID, metadata });
 
 createWeb3Modal({ wagmiConfig, projectId: walletconnectProjectID, chains });
