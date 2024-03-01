@@ -105,22 +105,27 @@ export default [
     type: "event"
   },
   {
-    inputs: [],
-    name: "owner",
-    outputs: [
+    inputs: [
       {
-        internalType: "address",
-        name: "",
-        type: "address"
+        internalType: "bytes32",
+        name: "dealId_",
+        type: "bytes32"
       }
     ],
-    stateMutability: "view",
-    type: "function",
-    constant: true
+    name: "approveDeal",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
   },
   {
-    inputs: [],
-    name: "renounceOwnership",
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "dealId_",
+        type: "bytes32"
+      }
+    ],
+    name: "cancelDeal",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function"
@@ -129,134 +134,34 @@ export default [
     inputs: [
       {
         internalType: "address",
-        name: "newOwner",
+        name: "partner_",
         type: "address"
-      }
-    ],
-    name: "transferOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function"
-  },
-  {
-    stateMutability: "payable",
-    type: "receive",
-    payable: true
-  },
-  {
-    inputs: [],
-    name: "feeToken",
-    outputs: [
+      },
       {
         internalType: "address",
-        name: "",
+        name: "sellingToken_",
         type: "address"
-      }
-    ],
-    stateMutability: "view",
-    type: "function",
-    constant: true
-  },
-  {
-    inputs: [],
-    name: "minimumFeeAmountInUSD",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256"
-      }
-    ],
-    stateMutability: "view",
-    type: "function",
-    constant: true
-  },
-  {
-    inputs: [],
-    name: "maximumFeeAmountInUSD",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256"
-      }
-    ],
-    stateMutability: "view",
-    type: "function",
-    constant: true
-  },
-  {
-    inputs: [
+      },
       {
         internalType: "address",
-        name: "origin",
+        name: "buyingToken_",
         type: "address"
       },
       {
         internalType: "uint256",
-        name: "amount",
+        name: "sellingAmount_",
         type: "uint256"
-      }
-    ],
-    name: "getFeeAmount",
-    outputs: [
+      },
       {
         internalType: "uint256",
-        name: "",
+        name: "buyingAmount_",
         type: "uint256"
       }
     ],
-    stateMutability: "view",
-    type: "function",
-    constant: true
-  },
-  {
-    inputs: [],
-    name: "dealDuration",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "",
-        type: "uint256"
-      }
-    ],
-    stateMutability: "view",
-    type: "function",
-    constant: true
-  },
-  {
-    inputs: [],
-    name: "dealCounts",
-    outputs: [
-      {
-        internalType: "uint256",
-        name: "_count",
-        type: "uint256"
-      }
-    ],
-    stateMutability: "view",
-    type: "function",
-    constant: true
-  },
-  {
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "index_",
-        type: "uint256"
-      }
-    ],
-    name: "dealIdAt",
-    outputs: [
-      {
-        internalType: "bytes32",
-        name: "",
-        type: "bytes32"
-      }
-    ],
-    stateMutability: "view",
-    type: "function",
-    constant: true
+    name: "createDeal",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function"
   },
   {
     inputs: [
@@ -322,8 +227,52 @@ export default [
       }
     ],
     stateMutability: "view",
-    type: "function",
-    constant: true
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "dealCounts",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "_count",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "dealDuration",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "index_",
+        type: "uint256"
+      }
+    ],
+    name: "dealIdAt",
+    outputs: [
+      {
+        internalType: "bytes32",
+        name: "",
+        type: "bytes32"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
   },
   {
     inputs: [
@@ -362,8 +311,7 @@ export default [
       }
     ],
     stateMutability: "view",
-    type: "function",
-    constant: true
+    type: "function"
   },
   {
     inputs: [
@@ -444,44 +392,113 @@ export default [
       }
     ],
     stateMutability: "view",
-    type: "function",
-    constant: true
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "feeToken",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
   },
   {
     inputs: [
       {
         internalType: "address",
-        name: "feeToken_",
+        name: "origin",
+        type: "address"
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256"
+      }
+    ],
+    name: "getFeeAmount",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "getUSDCtoSOLIDX",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "bytes32",
+        name: "dealId_",
+        type: "bytes32"
+      }
+    ],
+    name: "joinDeal",
+    outputs: [],
+    stateMutability: "payable",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "maximumFeeAmountInUSD",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "minimumFeeAmountInUSD",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256"
+      }
+    ],
+    stateMutability: "view",
+    type: "function"
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
         type: "address"
       }
     ],
-    name: "setFeeToken",
-    outputs: [],
-    stateMutability: "nonpayable",
+    stateMutability: "view",
     type: "function"
   },
   {
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "feeAmount_",
-        type: "uint256"
-      }
-    ],
-    name: "setMinimumFeeAmountInUSD",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function"
-  },
-  {
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "feeAmount_",
-        type: "uint256"
-      }
-    ],
-    name: "setMaximumFeeAmountInUSD",
+    inputs: [],
+    name: "renounceOwnership",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function"
@@ -513,6 +530,58 @@ export default [
     type: "function"
   },
   {
+    inputs: [
+      {
+        internalType: "address",
+        name: "feeToken_",
+        type: "address"
+      }
+    ],
+    name: "setFeeToken",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "feeAmount_",
+        type: "uint256"
+      }
+    ],
+    name: "setMaximumFeeAmountInUSD",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "feeAmount_",
+        type: "uint256"
+      }
+    ],
+    name: "setMinimumFeeAmountInUSD",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address"
+      }
+    ],
+    name: "transferOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
     inputs: [],
     name: "withdrawFee",
     outputs: [],
@@ -520,77 +589,7 @@ export default [
     type: "function"
   },
   {
-    inputs: [
-      {
-        internalType: "address",
-        name: "partner_",
-        type: "address"
-      },
-      {
-        internalType: "address",
-        name: "sellingToken_",
-        type: "address"
-      },
-      {
-        internalType: "address",
-        name: "buyingToken_",
-        type: "address"
-      },
-      {
-        internalType: "uint256",
-        name: "sellingAmount_",
-        type: "uint256"
-      },
-      {
-        internalType: "uint256",
-        name: "buyingAmount_",
-        type: "uint256"
-      }
-    ],
-    name: "createDeal",
-    outputs: [],
     stateMutability: "payable",
-    type: "function",
-    payable: true
-  },
-  {
-    inputs: [
-      {
-        internalType: "bytes32",
-        name: "dealId_",
-        type: "bytes32"
-      }
-    ],
-    name: "joinDeal",
-    outputs: [],
-    stateMutability: "payable",
-    type: "function",
-    payable: true
-  },
-  {
-    inputs: [
-      {
-        internalType: "bytes32",
-        name: "dealId_",
-        type: "bytes32"
-      }
-    ],
-    name: "approveDeal",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function"
-  },
-  {
-    inputs: [
-      {
-        internalType: "bytes32",
-        name: "dealId_",
-        type: "bytes32"
-      }
-    ],
-    name: "cancelDeal",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function"
+    type: "receive"
   }
 ];
