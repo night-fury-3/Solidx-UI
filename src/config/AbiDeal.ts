@@ -459,6 +459,13 @@ export default [
   },
   {
     inputs: [],
+    name: "killContract",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function"
+  },
+  {
+    inputs: [],
     name: "maximumFeeAmountInUSD",
     outputs: [
       {
