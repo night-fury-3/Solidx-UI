@@ -49,7 +49,7 @@ const FeeDisplayer = ({ isRuningTx, feeAmount }: FeeDisplayerProps) => {
                   alignItems: "center"
                 }}
               >
-                {`${Number(feeAmount) / 1e9}`}
+                {`${Math.floor(Number(feeAmount) / 1e9)}`}
               </Typography>
             </Grid>
             <Grid item xs={6}>
