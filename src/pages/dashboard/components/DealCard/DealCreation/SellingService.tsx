@@ -546,18 +546,18 @@ function SellingService({
                     py={2}
                     bgcolor={theme.palette.background.default}
                   >
-                      <Typography color={theme.palette.text.secondary}>
-                        Fee Required:{" "}
-                        <Typography component="span" color="inherit" fontWeight={600}>{`${
-                          Number(fee_Amount) / 1e9
-                        } SOLIDX`}</Typography>
-                      </Typography>
-                      <Typography color={theme.palette.text.secondary}>
-                        Your Balance:{" "}
-                        <Typography component="span" color="inherit" fontWeight={600}>{`${
-                          Number(fee_Balance) / 1e9
-                        } SOLIDX`}</Typography>
-                      </Typography>
+                    <Typography color={theme.palette.text.secondary}>
+                      Fee Required:{" "}
+                      <Typography component="span" color="inherit" fontWeight={600}>{`${
+                        Number(fee_Amount) / 1e9
+                      } SOLIDX`}</Typography>
+                    </Typography>
+                    <Typography color={theme.palette.text.secondary}>
+                      Your Balance:{" "}
+                      <Typography component="span" color="inherit" fontWeight={600}>{`${
+                        Number(fee_Balance) / 1e9
+                      } SOLIDX`}</Typography>
+                    </Typography>
                   </Stack>
                 </Grid>
               </Grid>
@@ -580,7 +580,7 @@ function SellingService({
                     <Link
                       target="_blank"
                       href={
-                        "https://app.uniswap.org/swap?outputCurrency=0x072382557067B36966dAB6f5FB90Be32C2dA07Eb"
+                        "https://app.uniswap.org/swap?outputCurrency=0xA76A6cC7fa9ab055b6101d443FD975520eb8cC75"
                       }
                       color={theme.palette.text.secondary}
                       fontSize="0.875rem"

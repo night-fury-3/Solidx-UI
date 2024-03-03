@@ -518,7 +518,7 @@ function ExchangeDeal() {
                   <Link
                     target="_blank"
                     href={
-                      "https://app.uniswap.org/swap?outputCurrency=0x072382557067B36966dAB6f5FB90Be32C2dA07Eb"
+                      "https://app.uniswap.org/swap?outputCurrency=0xA76A6cC7fa9ab055b6101d443FD975520eb8cC75"
                     }
                     color={theme.palette.text.secondary}
                     fontSize="0.875rem"
