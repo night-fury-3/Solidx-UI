@@ -487,13 +487,13 @@ function ExchangeDeal() {
                     <Typography color={theme.palette.text.secondary}>
                       Fee Required:{" "}
                       <Typography component="span" color="inherit" fontWeight={600}>{`${
-                        Number(fee_Amount) / 1e18
+                        Number(fee_Amount) / 1e9
                       } SOLIDX`}</Typography>
                     </Typography>
                     <Typography color={theme.palette.text.secondary}>
                       Your Balance:{" "}
                       <Typography component="span" color="inherit" fontWeight={600}>{`${
-                        Number(fee_Balance) / 1e18
+                        Number(fee_Balance) / 1e9
                       } SOLIDX`}</Typography>
                     </Typography>
                 </Stack>
