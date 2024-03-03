@@ -14,7 +14,7 @@ function PriceView() {
 
   const getPrice = useCallback(async () => {
     const temp = await getUSDCtoSOLIDX();
-    setPrice(1.0 / Number(temp));
+    setPrice(1e9 / Number(temp));
   }, [chainId]);
 
   useEffect(() => {
