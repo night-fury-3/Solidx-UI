@@ -1,5 +1,6 @@
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
 
 import {
   Box,
@@ -14,6 +15,7 @@ import {
   useTheme
 } from "@mui/material";
 import { ContentCopy } from "@mui/icons-material";
+import ForumIcon from "@mui/icons-material/Forum";
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 
 import { useAccount } from "wagmi";
@@ -71,6 +73,7 @@ function LoadingRow() {
 }
 
 function ServiceRow({ service }: { service: Service }) {
+  const navigate = useNavigate();
   const theme = useTheme();
   const { address: account } = useAccount();
   const { addNotification } = useNotifications();
@@ -247,21 +250,42 @@ function ServiceRow({ service }: { service: Service }) {
             <Typography color={DEAL_STATES_COLORS[service.status]}>
               {DEAL_STATES[service.status]}
             </Typography>
-            <IconButton
-              size="small"
-              onClick={(event) => {
-                event.stopPropagation();
-                handleCopy(service.id);
-              }}
-            >
-              <ContentCopy
-                fontSize="small"
-                sx={{
-                  "&:hover": { color: theme.palette.text.primary },
-                  color: theme.palette.text.secondary
+            <Stack direction="row" spacing={1.5}>
+              <IconButton
+                size="small"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  navigate(
+                    `/?chat_partner=${
+                      service.creator === account ? service.partner : service.creator
+                    }`
+                  );
                 }}
-              />
-            </IconButton>
+              >
+                <ForumIcon
+                  fontSize="small"
+                  sx={{
+                    "&:hover": { color: theme.palette.text.primary },
+                    color: theme.palette.text.secondary
+                  }}
+                />
+              </IconButton>
+              <IconButton
+                size="small"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleCopy(service.id);
+                }}
+              >
+                <ContentCopy
+                  fontSize="small"
+                  sx={{
+                    "&:hover": { color: theme.palette.text.primary },
+                    color: theme.palette.text.secondary
+                  }}
+                />
+              </IconButton>
+            </Stack>
           </Stack>
         </Grid>
       </Grid>
