@@ -677,7 +677,7 @@ function SellingService({
                   Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,
                 </Typography>
               </Stack>
-              <Button variant="contained" onClick={() => navigate("/mydeals/service")}>
+              <Button variant="contained" onClick={() => navigate("/my-deals/service")}>
                 View Deal
               </Button>
               <Button variant="text" onClick={handleCreatingClose}>
