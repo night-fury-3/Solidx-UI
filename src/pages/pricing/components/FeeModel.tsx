@@ -52,7 +52,7 @@ const FeeModel = () => {
                   }}
                 >
                   0.5% from <br />
-                  ETH/BNB {">"} 5 USD {"<"} 250 USD
+                  Amount {">"} 5 USD {"<"} 250 USD
                 </Typography>
               </Grid>
               <Grid item xs={12}>

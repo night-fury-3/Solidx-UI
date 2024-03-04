@@ -17,7 +17,7 @@ function DealPreview() {
             1.08
           </Typography>
           <Typography fontSize={16} color={theme.palette.text.secondary}>
-            ETH
+          BNB
           </Typography>
         </Box>
       </Stack>

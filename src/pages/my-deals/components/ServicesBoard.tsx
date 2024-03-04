@@ -84,7 +84,7 @@ function ServiceRow({ service }: { service: Service }) {
     const init = async () => {
       const symbol =
         service.paymentToken === zeroAddress
-          ? "ETH"
+          ? "BNB"
           : (await nameAndSymbol(service.paymentToken))[0].result || "_";
       const tokenDecimals =
         service.paymentToken === zeroAddress ? 18 : await decimals(service.paymentToken);

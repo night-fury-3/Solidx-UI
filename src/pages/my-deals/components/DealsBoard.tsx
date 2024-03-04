@@ -89,13 +89,13 @@ function DealRow({ deal }: { deal: Deal }) {
     const init = async () => {
       const sellingSymbol =
         deal.sellingToken === zeroAddress
-          ? "ETH"
+          ? "BNB"
           : (await nameAndSymbol(deal.sellingToken))[0].result || "_";
       const sellingDecimals =
         deal.sellingToken === zeroAddress ? 18 : await decimals(deal.sellingToken);
       const buyingSymbol =
         deal.buyingToken === zeroAddress
-          ? "ETH"
+          ? "BNB"
           : (await nameAndSymbol(deal.buyingToken))[0].result || "_";
       const buyingDecimals =
         deal.buyingToken === zeroAddress ? 18 : await decimals(deal.buyingToken);

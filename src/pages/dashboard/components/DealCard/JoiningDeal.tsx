@@ -63,11 +63,11 @@ function JoiningDeal({ onBack, dealType }: JoiningDealProps) {
             const _dealInfo: any = await getOTCInfo(dealId_.replace("0x", ""));
             const sellingToken =
               _dealInfo.sellingToken === zeroAddress
-                ? "ETH"
+                ? "BNB"
                 : (await nameAndSymbol(_dealInfo.sellingToken))[0].result;
             const buyingToken =
               _dealInfo.buyingToken === zeroAddress
-                ? "ETH"
+                ? "BNB"
                 : (await nameAndSymbol(_dealInfo.buyingToken))[0].result;
             const sellingDecimals =
               _dealInfo.sellingToken === zeroAddress ? 18 : await decimals(_dealInfo.sellingToken);
@@ -84,7 +84,7 @@ function JoiningDeal({ onBack, dealType }: JoiningDealProps) {
             const _dealInfo: any = await getServiceInfo(dealId_.replace("0x", ""));
             const paymentToken =
               _dealInfo.paymentToken === zeroAddress
-                ? "ETH"
+                ? "BNB"
                 : (await nameAndSymbol(_dealInfo.paymentToken))[0].result;
             const paymentDecimals =
               _dealInfo.paymentToken === zeroAddress ? 18 : await decimals(_dealInfo.paymentToken);
