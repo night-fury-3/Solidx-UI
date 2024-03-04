@@ -1,7 +1,7 @@
-import About from "assets/icons/About";
+// import About from "assets/icons/About";
 import Dashboard from "assets/icons/Dashboard";
-import Docs from "assets/icons/Docs";
-import Faq from "assets/icons/Faq";
+// import Docs from "assets/icons/Docs";
+// import Faq from "assets/icons/Faq";
 import MyDeals from "assets/icons/MyDeals";
 import Pricing from "assets/icons/Pricing";
 // import Settings from "assets/icons/Settings";
@@ -37,20 +37,20 @@ export const menuList: MenuItem[] = [
       }
     ]
   },
-  {
-    id: "docs",
-    title: "Docs",
-    type: MenuItemType.Item,
-    icon: <Docs />,
-    url: "/docs"
-  },
-  {
-    id: "faq",
-    title: "FAQ",
-    type: MenuItemType.Item,
-    icon: <Faq />,
-    url: "/faq"
-  },
+  // {
+  //   id: "docs",
+  //   title: "Docs",
+  //   type: MenuItemType.Item,
+  //   icon: <Docs />,
+  //   url: "/docs"
+  // },
+  // {
+  //   id: "faq",
+  //   title: "FAQ",
+  //   type: MenuItemType.Item,
+  //   icon: <Faq />,
+  //   url: "/faq"
+  // },
   {
     id: "pricing",
     title: "Pricing",
@@ -58,13 +58,13 @@ export const menuList: MenuItem[] = [
     icon: <Pricing />,
     url: "/pricing"
   },
-  {
-    id: "about",
-    title: "About",
-    type: MenuItemType.Item,
-    icon: <About />,
-    url: "/about"
-  }
+  // {
+  //   id: "about",
+  //   title: "About",
+  //   type: MenuItemType.Item,
+  //   icon: <About />,
+  //   url: "/about"
+  // }
   // {
   //   id: "settings",
   //   title: "Settings",

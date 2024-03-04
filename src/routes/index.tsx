@@ -15,7 +15,7 @@ function Routes() {
       <ReactRoute path="/my-deals/service" Component={MyServicesPage} />
       <ReactRoute path="/my-deals" Component={MyDealsPage} />
       <ReactRoute path="*" Component={ErrorPage} />
-      <ReactRoute path="/faq" Component={FaqPage} />
+      <ReactRoute path="/faq" Component={FaqPage} /> 
       <ReactRoute path="/pricing" Component={PricingPage} />
     </ReactRoutes>
   );
