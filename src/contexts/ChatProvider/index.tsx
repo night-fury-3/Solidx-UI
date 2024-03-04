@@ -99,6 +99,7 @@ export default function ChatProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (socket) {
       socket.emit("connections");
+      console.log("SOCKET EMIT CONNECTIONS");
     }
   }, [socket]);
 
