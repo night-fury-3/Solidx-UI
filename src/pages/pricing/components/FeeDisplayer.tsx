@@ -78,7 +78,7 @@ const FeeDisplayer = ({ isRuningTx, feeAmount }: FeeDisplayerProps) => {
               textAlign: "center"
             }}
           >
-            SolidX Escrow Fee Calculater
+            SolidX Escrow Fee Calculator
           </Typography>
         </Grid>
         <Grid item xs={12}>

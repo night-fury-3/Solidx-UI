@@ -27,7 +27,7 @@ const FeeCalculater = () => {
             lineHeight: "56px"
           }}
         >
-          Fee Calculater
+          Fee Calculator
         </Typography>
       </Stack>
       <Divider sx={{ my: 2 }} />
@@ -90,7 +90,7 @@ const FeeCalculater = () => {
                   lineHeight: "normal"
                 }}
               >
-                Calculater
+                Calculator
               </Typography>
             </Grid>
             <Grid item xs={12}>
