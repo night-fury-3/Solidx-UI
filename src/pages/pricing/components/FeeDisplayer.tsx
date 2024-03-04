@@ -82,7 +82,7 @@ const FeeDisplayer = ({ isRuningTx, feeAmount }: FeeDisplayerProps) => {
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Typography
+          {/* <Typography
             sx={{
               color: "#8D9092",
               padding: "3.5px",
@@ -94,7 +94,7 @@ const FeeDisplayer = ({ isRuningTx, feeAmount }: FeeDisplayerProps) => {
             }}
           >
             Lorem Ipsum is simply dummy text Lorem Ipsum
-          </Typography>
+          </Typography> */}
         </Grid>
       </Grid>
     </Box>

@@ -453,14 +453,14 @@ function JoiningDeal({ onBack, dealType }: JoiningDealProps) {
               <Typography fontSize="1.5rem" fontWeight={600}>
                 Your deal is successfully created
               </Typography>
-              <Typography
+              {/* <Typography
                 textAlign="center"
                 fontSize="0.875rem"
                 color={theme.palette.text.secondary}
               >
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,
-              </Typography>
+              </Typography> */}
             </Stack>
             <Button variant="text" onClick={handleClose}>
               Back

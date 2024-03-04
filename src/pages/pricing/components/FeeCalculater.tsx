@@ -34,7 +34,7 @@ const FeeCalculater = () => {
       <Box maxWidth="100%" sx={{ overflowX: "auto" }}>
         <Grid container alignItems="center" spacing={"32px"}>
           <Grid item xs={12}>
-            <Typography
+            {/* <Typography
               sx={{
                 color: "white",
                 fontSize: "16px",
@@ -44,7 +44,7 @@ const FeeCalculater = () => {
               }}
             >
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </Typography>
+            </Typography> */}
           </Grid>
           <Grid item xs={12} container spacing={"16px"}>
             <Grid item xs={12}>

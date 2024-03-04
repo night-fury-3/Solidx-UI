@@ -305,9 +305,9 @@ function DealRow({ deal }: { deal: Deal }) {
             bgcolor: theme.palette.background.default
           }}
         >
-          <Typography align="center" fontSize="1.125rem">
+          {/* <Typography align="center" fontSize="1.125rem">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </Typography>
+          </Typography> */}
           <Divider
             sx={{
               marginTop: 2,

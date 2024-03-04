@@ -131,7 +131,7 @@ const FeeModel = () => {
                     Minimum fee
                   </Typography>
                 </Grid>
-                <Grid item xs={12}>
+                {/* <Grid item xs={12}>
                   <Typography
                     sx={{
                       color: "#8D9092",
@@ -145,7 +145,7 @@ const FeeModel = () => {
                   >
                     Lorem Ipsum is simply dummy text Lorem Ipsum
                   </Typography>
-                </Grid>
+                </Grid> */}
               </Grid>
             </Box>
           </Grid>
@@ -206,7 +206,7 @@ const FeeModel = () => {
                     Maximum fee
                   </Typography>
                 </Grid>
-                <Grid item xs={12}>
+                {/* <Grid item xs={12}>
                   <Typography
                     sx={{
                       color: "#8D9092",
@@ -220,7 +220,7 @@ const FeeModel = () => {
                   >
                     Lorem Ipsum is simply dummy text Lorem Ipsum
                   </Typography>
-                </Grid>
+                </Grid> */}
               </Grid>
             </Box>
           </Grid>
