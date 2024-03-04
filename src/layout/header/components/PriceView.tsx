@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 
 import { useChainId } from "wagmi";
-import { Stack, Typography } from "@mui/material";
+import { Link, Stack, Typography } from "@mui/material";
 
 import useDealContract from "hooks/useDealContract";
 
@@ -34,9 +34,21 @@ function PriceView() {
       >
         <Logo />
       </Stack>
-      <Typography fontSize="0.75rem" fontWeight={600}>
-        ${price}
-      </Typography>
+      <Link
+        href={
+          "https://www.dextools.io/app/en/ether/pair-explorer/0x78396df1c8ba45637e7e5be9f0c8072f9f2e27f2?t=1709560244279"
+        }
+      >
+        <Typography
+          fontSize="0.75rem"
+          fontWeight={600}
+          sx={{
+            borderBottom: "1px solid white"
+          }}
+        >
+          ${price}
+        </Typography>
+      </Link>
     </Stack>
   );
 }
