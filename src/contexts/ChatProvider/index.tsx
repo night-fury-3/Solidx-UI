@@ -59,7 +59,7 @@ export default function ChatProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (signedMessage) {
       axios
-        .post(process.env.REACT_APP_BACKEND_HTTP || "", {
+        .post(process.env.REACT_APP_BACKEND_HTTP + "/current" || "", {
           signature: signedMessage,
           account
         })
@@ -77,7 +77,7 @@ export default function ChatProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (accessToken) {
       console.log("Connection...");
-      const _socket = io(process.env.REACT_APP_BACKEND_WS + "/current" || "", {
+      const _socket = io(process.env.REACT_APP_BACKEND_WS || "", {
         transports: ["websocket"],
         query: {
           token: accessToken
