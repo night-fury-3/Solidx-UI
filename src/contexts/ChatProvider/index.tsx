@@ -77,7 +77,7 @@ export default function ChatProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (accessToken) {
       console.log("Connection...");
-      const _socket = io(process.env.REACT_APP_BACKEND_WS || "", {
+      const _socket = io(process.env.REACT_APP_BACKEND_WS + "/current" || "", {
         transports: ["websocket"],
         query: {
           token: accessToken
