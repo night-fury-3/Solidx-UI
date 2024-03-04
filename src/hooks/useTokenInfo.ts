@@ -53,7 +53,7 @@ function useTokenInfo() {
       const { hash } = await writeContract({
         abi: AbiERC20,
         address: token,
-        functionName: "increaseAllowance",
+        functionName: "approve",
         args: [to, amount]
       });
       return waitForTransaction({ hash });
